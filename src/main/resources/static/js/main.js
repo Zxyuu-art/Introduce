@@ -77,7 +77,7 @@ languageToggle.addEventListener("click", () => {
 
         const startAutoplay = () => {
             if (reducedMotion.matches || document.hidden || autoplayInterval) return;
-            autoplayInterval = window.setInterval(() => showSlide(activeSlide + 1), 6000);
+            autoplayInterval = window.setInterval(() => showSlide(activeSlide + 1), 4000);
         };
 
         previousSlideButton.addEventListener("click", () => showSlide(activeSlide - 1));

@@ -46,7 +46,7 @@ h1, h2, p { margin-top: 0; }
 .hero-meta { display: flex; gap: 43px; margin-top: 57px; }
 .hero-meta div { display: grid; gap: 8px; font-size: 11px; font-weight: 600; }
 .meta-label { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: 1px; }
-.hero-visual { min-width: 0; height: 438px; position: relative; align-self: center; margin-top: -8px; background: #d0d3c7; }
+.hero-visual { min-width: 0; height: 480px; position: relative; align-self: center; margin-top: -8px; background: #d0d3c7; }
 .hero-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 48% center; transition: opacity .28s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
 .hero-image.is-transitioning { opacity: 0; transform: scale(1.035); }
 .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 70%, #15221c77); pointer-events: none; }
@@ -107,7 +107,7 @@ h1, h2, p { margin-top: 0; }
     .page-width, .site-header { width: calc(100% - 56px); }
     .hero { min-height: auto; grid-template-columns: 1fr .86fr; gap: 32px; padding-top: 66px; padding-bottom: 89px; }
     .hero h1 { font-size: clamp(39px, 6vw, 56px); }
-    .hero-visual { height: 390px; }
+    .hero-visual { height: 430px; }
     .hero-meta { gap: 22px; }
     .hero-meta div:last-child { max-width: 170px; }
     .about-grid { gap: 52px; }
@@ -128,7 +128,7 @@ h1, h2, p { margin-top: 0; }
     .hero-intro { font-size: 14px; }
     .hero-meta { gap: 25px; margin-top: 37px; }
     .hero-meta div { font-size: 10px; }
-    .hero-visual { height: min(105vw, 400px); margin: 0 0 0 14px; }
+    .hero-visual { height: min(115vw, 430px); margin: 0 0 0 14px; }
     .study-stamp { left: -14px; }
     .scroll-cue { bottom: 25px; }
     .about-section { padding: 78px 0 82px; }
