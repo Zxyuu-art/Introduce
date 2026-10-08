@@ -19,7 +19,7 @@ button { color: inherit; font: inherit; }
 .page-width { width: min(1200px, calc(100% - 96px)); margin-inline: auto; }
 
 .site-header { width: min(1360px, calc(100% - 96px)); height: 84px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
-.wordmark { display: inline-flex; align-items: center; gap: 10px; font: 800 11px var(--font-display); letter-spacing: 0; }
+.wordmark { display: inline-flex; align-items: center; gap: 10px; font: 800 12px var(--font-display); letter-spacing: 0; }
 .wordmark-mark { width: 30px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--green); font: 800 14px var(--font-display); }
 .main-nav { display: flex; align-items: center; gap: 38px; font-size: 12px; font-weight: 600; }
 .main-nav a:not(.nav-index) { transition: color .2s ease; }
@@ -47,10 +47,15 @@ h1, h2, p { margin-top: 0; }
 .hero-meta div { display: grid; gap: 8px; font-size: 11px; font-weight: 600; }
 .meta-label { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: 1px; }
 .hero-visual { min-width: 0; height: 438px; position: relative; align-self: center; margin-top: -8px; background: #d0d3c7; }
-.hero-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 48% center; }
+.hero-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 48% center; transition: opacity .28s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.hero-image.is-transitioning { opacity: 0; transform: scale(1.035); }
 .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 70%, #15221c77); pointer-events: none; }
 .image-caption { position: absolute; z-index: 1; right: 20px; bottom: 19px; left: 20px; display: flex; justify-content: space-between; gap: 12px; color: white; font-size: 8px; font-weight: 700; letter-spacing: 1px; }
 .caption-number { color: var(--green); }
+.slide-controls { position: absolute; z-index: 3; right: 16px; bottom: 48px; display: flex; gap: 7px; }
+.slide-control { width: 38px; aspect-ratio: 1; display: grid; place-items: center; border: 1px solid #ffffff80; border-radius: 2px; background: #17241fcc; color: white; cursor: pointer; font-size: 17px; transition: background-color .2s ease, transform .2s ease; }
+.slide-control:hover { transform: translateY(-2px); background: var(--ink); }
+.slide-control:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 .study-stamp { position: absolute; z-index: 2; top: 24px; left: -29px; width: 146px; min-height: 63px; display: flex; align-items: center; gap: 11px; padding: 11px 13px; background: var(--green); color: var(--ink); box-shadow: 0 8px 22px #17241f19; }
 .study-stamp > span:first-child { font: 800 24px var(--font-display); }
 .study-stamp > span:last-child { font-size: 8px; line-height: 1.6; font-weight: 800; letter-spacing: .5px; }
@@ -112,6 +117,8 @@ h1, h2, p { margin-top: 0; }
     html { scroll-padding-top: 68px; }
     .page-width, .site-header { width: calc(100% - 40px); }
     .site-header { height: 68px; }
+    .site-header > .wordmark { gap: 8px; font-size: 10px; }
+    .site-header > .wordmark .wordmark-mark { width: 26px; }
     .main-nav { gap: 18px; font-size: 11px; }
     .main-nav a:first-child { display: none; }
     .nav-index { padding: 8px 10px; }

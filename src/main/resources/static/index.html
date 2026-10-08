@@ -14,7 +14,7 @@
 </head>
 <body>
 <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Everything About Me, home"><span class="wordmark-mark">E</span><span>Everything About Me?</span></a>
+    <a class="wordmark" href="#home" aria-label="Everything About Me, home"><span class="wordmark-mark">H</span><span>Everything About Me?</span></a>
     <nav class="main-nav" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#contact">Connect</a>
@@ -39,9 +39,13 @@
         </div>
 
         <div class="hero-visual" data-reveal>
-            <img class="hero-image" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="A group of students collaborating around a laptop" fetchpriority="high">
-            <div class="image-caption"><span class="caption-number">PROFILE / 2026</span><span>LEARNING THROUGH COLLABORATION</span></div>
+            <img class="hero-image" id="hero-image" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Students collaborating around a laptop" fetchpriority="high">
+            <div class="image-caption"><span class="caption-number" id="slide-count">PROFILE / 2026 · 01 / 03</span><span id="slide-caption">LEARNING THROUGH COLLABORATION</span></div>
             <div class="study-stamp" aria-label="Computer Science, Universitas Bandar Lampung"><span>CS</span><span>INFORMATIKA<br>UBL · INDONESIA</span></div>
+            <div class="slide-controls" role="group" aria-label="Profile image carousel">
+                <button class="slide-control" id="slide-prev" type="button" aria-label="Previous photo"><span aria-hidden="true">&#8592;</span></button>
+                <button class="slide-control" id="slide-next" type="button" aria-label="Next photo"><span aria-hidden="true">&#8594;</span></button>
+            </div>
         </div>
         <a class="scroll-cue" href="#about"><span class="scroll-line"></span> SCROLL TO EXPLORE</a>
     </section>
